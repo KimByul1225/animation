@@ -30,7 +30,7 @@ const boxVariants: Variants = {
 
 
 
-function App() {
+function MotionValue() {
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-800, 800], [-360, 360]);
   const gradient = useTransform(
@@ -67,4 +67,4 @@ function App() {
   );
 }
 
-export default App;
+export default MotionValue;
