@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, useMotionValue, useMotionValueEvent } from "framer-motion";
 
 
 const Wrapper = styled.div`
@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 
 const Box = styled(motion.div)`
   width: 200px;
@@ -22,33 +23,25 @@ const Box = styled(motion.div)`
 
 
 const boxVariants: Variants = {
-  hover: {
-    scale:1.5, rotateZ: 90
-  },
-  click: {
-    scale:1, borderRadius:"100px"
-  },
-  drag: {
-    backgroundColor: "rgb(46, 204, 113)",
-    transition: {
-      duration: 0.5
-    }
-    
-  }
+
+  
 
 }
 
 
 
 function App() {
+  const x = useMotionValue(0);
+  useMotionValueEvent(x, "change", (l) => {
+    console.log(l);
+  });
   return (
     <Wrapper>
       <Box
-        drag
+        style={{x}}
+        drag="x"
+        dragSnapToOrigin
         variants={boxVariants}
-        whileHover="hover"
-        whileTap="click"
-        whileDrag="drag"
       />
     </Wrapper>
   );

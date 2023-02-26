@@ -27,6 +27,12 @@ const boxVariants: Variants = {
     },
     click: {
         scale:1, borderRadius:"100px"
+    },
+    focus: {
+        
+    },
+    draging:{
+
     }
 
 }
@@ -40,6 +46,8 @@ function Gestures() {
             variants={boxVariants}
             whileHover="hover"
             whileTap="click"
+            whileFocus="focus"
+            whileDrag="draging"
         />
         </Wrapper>
     );
