@@ -40,7 +40,7 @@ const boxVariants: Variants = {
 
 
 
-function App() {
+function Draging() {
   return (
     <Wrapper>
       <Box
@@ -54,4 +54,4 @@ function App() {
   );
 }
 
-export default App;
+export default Draging;
