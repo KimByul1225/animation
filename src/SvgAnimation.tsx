@@ -30,7 +30,7 @@ const svg = {
 
 
 
-function App() {
+function SvgAnimation() {
   return (
     <Wrapper>
       <Svg
@@ -53,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default SvgAnimation;
