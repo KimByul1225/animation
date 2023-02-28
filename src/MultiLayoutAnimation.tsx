@@ -40,7 +40,7 @@ const Overlay = styled(motion.div)`
 
 `
 
-function App() {
+function MultiLayoutAnimation() {
   const boxArray = [1,2,3,4];
   // const [clicked, setClicked] = useState(false);
   const [id, setId] = useState<null | number>(null);
@@ -70,4 +70,4 @@ function App() {
   );
 }
 
-export default App;
+export default MultiLayoutAnimation;
