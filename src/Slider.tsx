@@ -55,7 +55,7 @@ const box: Variants = {
   
 } 
 
-function App() {
+function Slider() {
   const [visible, setVisible] = useState(1);
   const [back, setBack] = useState(false);
   const nextPlease = () =>{ 
@@ -91,4 +91,4 @@ function App() {
   );
 }
 
-export default App;
+export default Slider;
